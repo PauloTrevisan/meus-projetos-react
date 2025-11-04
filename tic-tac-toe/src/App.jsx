@@ -54,17 +54,56 @@ export default function App() {
   return (
   <>
     <style>{`
-    .board {
-      display:grid;
-      grid-template-columns: repeat(3, 100px);
-      gap: 5px;
-    }
-    
-    .square {
-      width: 100px;
-      height: 100px;
-      font-size:36px;
-      font-weight: bold;
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #1a202c;
+        color: #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .status h2 {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        color: #90cdf4;
+        margin-bottom: 24px;
+      }
+
+      .board {
+        display:grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 5px;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+        font-size:36px;
+        font-weight: bold;
+        background-color: #2d3748; /* Cor de fundo do botão */
+        color: #e2e8f0; /* Cor do X e O */
+        border: 1px solid #4a5568;
+      }
+
+      #reset {
+        margin-top: 24px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #1a202c;
+        background-color: #90cdf4;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      #reset:hover {
+        background-color: #63b3ed;
     }
   `}</style>
     <div className="status">
